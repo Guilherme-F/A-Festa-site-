@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Formulario</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+
+	<fieldset>
+	<legend><h3>Preencha</h3></legend><hr>
+
+	<form name="user" action="https://www.google.com">
+
+		<legend><h4>Cadastro</h4></legend>
+
+		E-mail:<br>
+		<input type="email" name="E-mail" required>
+		<br>
+
+		<br>Nome Completo:<br>
+		<input type="text" name="Nome" required>
+		<br>
+
+		<br>Telefone:<br>
+		<input type="number" name="Telefone" required>
+		<br>
+
+		<br>Data de nascimento:<br>
+		<input type="date" name="Data de nascimento" required>
+		<br>
+                
+                <br>Sexo<br>
+                <input type="radio" id="male" name="masculino" value="male">
+  		<label for="male">Masculino</label><br>
+  		<input type="radio" id="female" name="feminino" value="female">
+  		<label for="female">Feminino</label>
+                <br>
+                
+		<br>Senha:<br>
+		<input type="passoword" name="senha" required>
+		<br>
+
+		<br>CPF:<br>
+		<input type="number" name="CPF" required>
+		<br>
+
+		<br><input type="reset">
+		<input type="submit" ng-disabled="user.Nome.$dirty && user.Nome.$invalid ||  
+user.Nome.$dirty && user.Nome.$invalid" value="Proximo">
+
+	</form>
+	</fieldset> 
+</body>
+
+</html>
